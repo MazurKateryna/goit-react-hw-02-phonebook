@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import ContactEditor from '../components/ContactsEditor/ContactEditor';
 import ContactList from '../components/ContactList/ContactList';
 import Filter from "./Filter";
@@ -23,7 +22,6 @@ class App extends Component  {
           contacts: [
             ...prevState.contacts,
             objectContact],
-            id: uuidv4(),
         } 
       })  
   };

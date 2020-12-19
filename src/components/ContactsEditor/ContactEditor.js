@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { v4 as uuidv4 } from 'uuid';
 import './ContactEditor.css'
 
 export default class ContactEditor extends Component {
@@ -21,7 +22,7 @@ export default class ContactEditor extends Component {
 
  handleSubmit = e => {
    e.preventDefault();
-   this.props.onAddContact({...this.state});
+   this.props.onAddContact({...this.state, id: uuidv4()});
    this.setState( { name: '', number: ''});
  };
 
